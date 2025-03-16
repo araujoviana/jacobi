@@ -69,11 +69,13 @@ def imprimir_matriz(matriz):
         print()
 
 def main():
+
+    # Exercicio 1
+
     sistema1 = [
-        [10,-1,2,0,6],
-        [-1,11,-1,3,25],
-        [2,-1,10,-1,-11],
-        [0,3,-1,8,15]
+        [3, 1, -1, 1],
+        [1, 4, 1, 6],
+        [-1, 2, 5, -4]
     ]
 
     print("Sistema:")
