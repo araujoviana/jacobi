@@ -59,7 +59,7 @@ def jacobi(matriz_aumentada, num_iteracoes, tolerancia):
 def imprimir_lista(lista):
     """Formata saída numérica com 4 casas decimais."""
     for i in range(len(lista)):
-        print(f"{lista[i]:.4f}", end=" ") # Imprime até a quarta casa decimal
+        print(f"x{i+1} =  {lista[i]:.4f}", end=" ") # Imprime até a quarta casa decimal
     print("\n")
 
 
