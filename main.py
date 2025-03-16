@@ -50,14 +50,16 @@ def jacobi(matriz_aumentada, num_iteracoes, tolerancia):
         aprox_anterior = list(aprox_atual)
         aprox_atual = aproximar_resultado(matriz_coef_isolada, termos_indep_isolados, aprox_anterior)
         if comparar_tolerancia(aprox_atual, aprox_anterior, tolerancia):
+            print(f"Convergiu na iteração {i}")
             return aprox_atual  # Convergência antecipada
+    print("Limite de iterações atingido")
     return aprox_atual  # Retorna após máximo de iterações ser atingido
 
 
 def imprimir_lista(lista):
     """Formata saída numérica com 4 casas decimais."""
     for i in range(len(lista)):
-        print(f"{lista[i]:.4f}", end=" ")  # Alinhamento decimal uniforme
+        print(f"{lista[i]:.4f}", end=" ") # Imprime até a quarta casa decimal
     print("\n")
 
 
@@ -73,16 +75,18 @@ def main():
     # Exercicio 1
 
     sistema1 = [
-        [3, 1, -1, 1],
-        [1, 4, 1, 6],
-        [-1, 2, 5, -4]
+    [10, -1, 2, 0, 6],
+    [-1, 11, -1, 3, 25],
+    [2, -1, 10, -1, -11],
+    [0, 3, -1, 8, 15]
     ]
+    tolerancia = 1e-3
 
     print("Sistema:")
     imprimir_matriz(sistema1)
 
     print("Resultado com Método de Jacobi:")
-    imprimir_lista(jacobi(sistema1, 10, 10 ** -3))
+    imprimir_lista(jacobi(sistema1, 10, tolerancia))
 
 
 if __name__ == '__main__':
