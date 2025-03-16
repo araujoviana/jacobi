@@ -82,12 +82,31 @@ def main():
     ]
     tolerancia = 1e-3
 
+    print("Exercicio 1")
+
     print("Sistema:")
     imprimir_matriz(sistema1)
 
     print("Resultado com Método de Jacobi:")
     imprimir_lista(jacobi(sistema1, 10, tolerancia))
 
+    # Exercicio 2
+
+    sistema2 = [
+        [4, 1, -1, 3],
+        [1, 5, 1, -6],
+        [2, -1, 6, 8]
+    ]
+    tolerancia = 0.1
+    max_iteracoes = 10
+
+    print("Exercicio 2")
+
+    print("Sistema:")
+    imprimir_matriz(sistema2)
+
+    print("Resultado com Método de Jacobi:")
+    imprimir_lista(jacobi(sistema2, max_iteracoes, tolerancia))
 
 if __name__ == '__main__':
     main()
